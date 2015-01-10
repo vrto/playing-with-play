@@ -1,0 +1,7 @@
+GET         /                     controllers.Application.index()
+GET         /assets/*file         controllers.Assets.at(path="/public", file)
+GET         /products             controllers.Products.list()
+GET         /products/new         controllers.Products.newProduct()
+GET         /products/:ean        controllers.Products.details(ean: String)
+POST        /products             controllers.Products.save()
+DELETE      /products/:ean        controllers.Products.delete(ean: String)
